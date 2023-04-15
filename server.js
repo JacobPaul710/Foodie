@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const citiesController = require('./controllers/cities');
+const citiesController = require('./controllers/restaurants');
 
 const PORT = 4000;
 

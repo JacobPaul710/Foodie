@@ -1,19 +1,28 @@
 const express = require('express');
 const router = express.Router();
-let cities = require('../models/Cities');
+let restaurants = require('../models/Restaurants');
 const seededData = [
     {
-        cityName: "Portland",
+        city: "Portland",
+        restaurant: "Ranch Pizza",
         cuisine: "Pizza",
-        restaurantName: "Ranch Pizza"
+        menuItem: "Radicchio Caeser Salad",
+        zipcode: 97211,
+        price: 12
     }, {
-        cityName: "New York",
+        city: "New York",
+        restaurant: "Speedy Romeo",
         cuisine: "Pizza",
-        restaurantName: "Speedy Romeo"
+        menuItem: "Dick Dale",
+        zipcode: 11238,
+        price: 22
     }, {
-        cityName: "Manassas",
+        city: "New Orleans",
+        restaurant: "Some pizza place",
         cuisine: "Pizza",
-        restaurantName: "Some pizza place"
+        menuItem: "Oysters",
+        zipcode: 70032,
+        price: 32
     }
 ]
 
