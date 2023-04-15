@@ -1,4 +1,4 @@
-require('..config/connection');
+require('../config/connection');
 const mongoose = require('mongoose');
 
 const citiesSchema = new mongoose.Schema(

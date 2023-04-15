@@ -18,7 +18,9 @@ const seededData = [
 ]
 
 // this route needs to be the id of the cityName, and I'm not sure how to do that at the moment, because the show page from here will need to be the id of the restaurantName.
-router.get('/')
+router.get('/Portland', (req, res) => {
+    res.render('cities/portland.ejs')
+})
 
 
 module.exports = router;
