@@ -6,29 +6,35 @@ const seededData = [
         city: "Portland",
         restaurant: "Ranch Pizza",
         cuisine: "Pizza",
+        review: "My favorite pizza in Portland!",
         menuItem: "Radicchio Caeser Salad",
+        price: 12,
         zipcode: 97211,
-        price: 12
+        webLink: "https://www.ranchpdx.com/"
     }, {
         city: "New York",
         restaurant: "Speedy Romeo",
         cuisine: "Pizza",
+        review: "My favorite pizza in Brooklyn!",
         menuItem: "Dick Dale",
+        price: 22,
         zipcode: 11238,
-        price: 22
+        webLink: "https://speedyromeo.com/"
     }, {
         city: "New Orleans",
-        restaurant: "Some pizza place",
+        restaurant: "Margot's",
         cuisine: "Pizza",
-        menuItem: "Oysters",
+        review: "My favorite pizza in New Orleans!",
+        menuItem: "Cavoletti",
+        price: 14,
         zipcode: 70032,
-        price: 32
+        webLink: "https://www.margotsnola.com/"
     }
 ]
 
 // this route needs to be the id of the cityName, and I'm not sure how to do that at the moment, because the show page from here will need to be the id of the restaurantName.
 router.get('/Portland', (req, res) => {
-    res.render('cities/portland.ejs')
+    res.render('resto_show.ejs')
 })
 
 

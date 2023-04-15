@@ -6,15 +6,17 @@ const restaurantsSchema = new mongoose.Schema(
         city: String, required,
         restaurant: String, required,
         cuisine: String, required,
+        review: String, required,
         menuItem: String, required,
+        price: Number, required,
         zipcode: Number, required,
-        price: Number, required
+        webLink: String, required
     },
     {
         timestamps: true
     }
 );
 
-const Cities = mongoose.model('Restaurant', restaurantsSchema);
+const Restaurants = mongoose.model('Restaurant', restaurantsSchema);
 
 module.exports = Restaurants;
