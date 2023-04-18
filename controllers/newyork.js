@@ -120,7 +120,7 @@ router.get('/newyork/:id/delete', async (req, res, next) => {
 
 router.delete('/newyork/:id', async (req, res, next) => {
     try {
-        const deletedNy = await.findByIdAndDelete(req.params.id);
+        const deletedNy = await newyork.findByIdAndDelete(req.params.id);
         console.log(deletedNy);
         res.redirect('/newyork');
     } catch(err) {
