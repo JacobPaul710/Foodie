@@ -38,3 +38,29 @@ const seededData = [
     }
 ];
 
+router.get('/portland', async (req, res, next) => {
+    try {
+        const pdxRestaurants = await portland.find({});
+        console.log(portland);
+        res.render('portland/index.ejs', {portland: pdxRestaurants});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.get('/porland/new', (req, res) => {
+    res.render('portland/new.ejs');
+})
+
+router.get('/portland/:id', async (req, res, next) => {
+    try {
+        const pdxRestaurant = await portland.findById(req.params.id);
+        res.render('portland/show.ejs', {singlePortland: pdxRestaurant});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+module.exports = router;
