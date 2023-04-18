@@ -18,6 +18,6 @@ const newyorkSchema = new mongoose.Schema(
     }
 );
 
-const Portland = mongoose.model('New York', newyorkSchema);
+const NewYork = mongoose.model('New York', newyorkSchema);
 
 module.exports = NewYork;

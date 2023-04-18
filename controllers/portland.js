@@ -42,7 +42,7 @@ router.get('/portland', async (req, res, next) => {
     try {
         const pdxRestaurants = await portland.find({});
         console.log(portland);
-        res.render('portland/index.ejs', {portland: pdxRestaurants});
+        res.render('portland/portlandIndex.ejs', {portland: pdxRestaurants});
     } catch(err) {
         console.log(err);
         next();
