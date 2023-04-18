@@ -1,22 +1,23 @@
 require('../config/connection');
 const mongoose = require('mongoose');
 
-const restaurantsSchema = new mongoose.Schema(
+const portlandSchema = new mongoose.Schema(
     {
         city: String,
         restaurant: String,
         cuisine: String,
         review: String,
-        menuItem: String,
-        price: Number,
-        zipcode: Number,
+        priceRange: Number,
         webLink: String,
+        menuItemOne: String,
+        menuItemTwo: String,
+        menuItemThree: String
     },
     {
         timestamps: true
     }
 );
 
-const Restaurants = mongoose.model('Restaurant', restaurantsSchema);
+const Portland = mongoose.model('Portland', portlandSchema);
 
-module.exports = Restaurants;
+module.exports = Portland;
