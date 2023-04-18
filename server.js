@@ -3,6 +3,8 @@ const express = require('express');
 const app = express();
 const citiesController = require('./controllers/cities')
 const restaurantsController = require('./controllers/restaurants');
+const portlandController = require('./controllers/portland');
+const newyorkController = require('./controllers/newyork');
 
 const PORT = 4000;
 
@@ -17,6 +19,8 @@ app.use(express.static(__dirname + '/Public'));
 
 app.use('', citiesController);
 app.use('', restaurantsController);
+app.use('', portlandController);
+app.use('', newyorkController);
 
 app.listen(PORT, () => {
     console.log(`Server is listening on PORT ${PORT}`);
