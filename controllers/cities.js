@@ -4,22 +4,24 @@ let cities = require('../models/Cities');
 const seededData = [
     {
         cityName: "Portland",
-        cuisine: "Pizza",
-        restaurantName: "Ranch Pizza"
-    }, {
-        cityName: "New York",
-        cuisine: "Pizza",
-        restaurantName: "Speedy Romeo"
-    }, {
-        cityName: "Manassas",
-        cuisine: "Pizza",
-        restaurantName: "Some pizza place"
+        restaurantName: "Ranch Pizza",
+        cuisine: "pizza"
+
     }
 ]
 
-// this route needs to be the id of the cityName, and I'm not sure how to do that at the moment, because the show page from here will need to be the id of the restaurantName.
-router.get('/Portland', (req, res) => {
-    res.render('cities/portland.ejs')
+router.get('/', (req, res) => {
+    res.render('home.ejs')
+})
+
+router.get('/:id', async (req, res, next) => {
+    try {
+        const myCity = await cities.findById(req.params.id);
+        res.render('city.ejs', {cities: myCity});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
 })
 
 

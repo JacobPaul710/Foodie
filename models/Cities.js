@@ -4,8 +4,8 @@ const mongoose = require('mongoose');
 const citiesSchema = new mongoose.Schema(
     {
         cityName: String,
-        cuisine: String,
-        restaurantName: String
+        restaurantName: String,
+        cuisine: String
     },
     {
         timestamps: true
