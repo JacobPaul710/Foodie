@@ -63,4 +63,60 @@ router.get('/portland/:id', async (req, res, next) => {
     }
 })
 
+
+router.post('/portland', async (req, res, next) => {
+    try {
+        const newPdxResto = await portland.create(req.body);
+        console.log(newPdxResto);
+        res.redirect('/portland');
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.get('/portland/:id/edit', async (req, res, next) => {
+    try {
+        const pdxRestoToEdit = await portland.findById(req.params.id);
+        console.log(pdxRestoToEdit);
+        res.render('portland/ejs', {singlePortland: pdxRestoToEdit});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.put('portland/:id', async (req, res, next) => {
+    try {
+        updatedPdx = await portland.findByIdAndUpdate(req.params.id, req.body);
+        console.log(updatedPdx);
+        res.redirect(`/portland/${req.params.id}`);
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.get('/portland/:id/delete', async (req, res, next) => {
+    try {
+        const pdxRestoToDelete = await portland.findByIdAndDelete(req.params.id);
+        console.log(pdxRestoToDelete);
+        res.render('portland/delete.ejs', {singlePortland: pdxRestoToDelete})
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+router.delete('/portland/:id', async (req, res, next) => {
+    try {
+        const deletedPdx = await portland.findByIdAndDelete(req.params.id);
+        console.log(deletedPdx);
+        res.redirect('/portland');
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
 module.exports = router;
