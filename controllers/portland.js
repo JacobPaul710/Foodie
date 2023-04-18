@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 let portland = require('../models/Portland');
 
-const seededData = [
+const pdxSeed = [
     {
         city: "Portland",
         restaurant: "Ranch Pizza",
@@ -53,6 +53,17 @@ router.get('/porland/new', (req, res) => {
     res.render('portland/new.ejs');
 })
 
+router.get('/portland/seed/', async (req, res, next) => {
+    try {
+        await portland.deleteMany({});
+        await portland.insertMany(pdxSeed);
+        res.redirect('/portland');
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
 router.get('/portland/:id', async (req, res, next) => {
     try {
         const pdxRestaurant = await portland.findById(req.params.id);
@@ -63,11 +74,10 @@ router.get('/portland/:id', async (req, res, next) => {
     }
 })
 
-
 router.post('/portland', async (req, res, next) => {
     try {
-        const newPdxResto = await portland.create(req.body);
-        console.log(newPdxResto);
+        const newRestoPdx = await portland.create(req.body);
+        console.log(newRestoPdx);
         res.redirect('/portland');
     } catch(err) {
         console.log(err);
