@@ -6,7 +6,7 @@ const nySeed = [
     {
         city: "New York",
         restaurant: "Speedy Romeo",
-        cuisine: "piazz",
+        cuisine: "pizza",
         review: "Best pizza in Brooklyn!",
         priceRange: 40,
         webLink: "https://speedyromeo.com/",
