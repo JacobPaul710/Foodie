@@ -11,7 +11,10 @@ const portlandSchema = new mongoose.Schema(
         webLink: String,
         menuItemOne: String,
         menuItemTwo: String,
-        menuItemThree: String
+        menuItemThree: String,
+        imgOne: String,
+        imgTwo: String,
+        imgThree: String
     },
     {
         timestamps: true

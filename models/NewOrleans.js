@@ -1,7 +1,7 @@
 require('../config/connection');
 const mongoose = require('mongoose');
 
-const newyorkSchema = new mongoose.Schema(
+const neworleansSchema = new mongoose.Schema(
     {
         city: String,
         restaurant: String,
@@ -21,6 +21,6 @@ const newyorkSchema = new mongoose.Schema(
     }
 );
 
-const NewYork = mongoose.model('New York', newyorkSchema);
+const NewOrleans = mongoose.model('New Orleans', neworleansSchema);
 
-module.exports = NewYork;
+module.exports = NewOrleans;
