@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const portlandController = require('./controllers/portland');
 const newyorkController = require('./controllers/newyork');
+const neworleansController = require('./controllers/neworleans');
 
 const PORT = 5001;
 
@@ -15,7 +16,7 @@ app.get('/', (req, res) => {
     res.render('home.ejs')
 })
 
-
+app.use('', neworleansController);
 app.use('', portlandController);
 app.use('', newyorkController);
 

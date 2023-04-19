@@ -23,7 +23,7 @@ router.get('/neworleans', async (req, res, next) => {
     try {
         const nolaRestaurants = await neworleans.find({});
         console.log(neworleans);
-        res.render('neworleans/index.ejs', {neworleans: nolaRestaurants});
+        res.render('neworleans/newOrleansIndex.ejs', {neworleans: nolaRestaurants});
     } catch(err) {
         console.log(err);
         next();
