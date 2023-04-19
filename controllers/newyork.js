@@ -42,7 +42,7 @@ router.get('/newyork', async (req, res, next) => {
     try {
         const nycRestaurants = await newyork.find({});
         console.log(newyork);
-        res.render('newyork/index.ejs', {newyork: nycRestaurants});
+        res.render('newyork/newYorkIndex.ejs', {newyork: nycRestaurants});
     } catch(err) {
         console.log(err);
         next();

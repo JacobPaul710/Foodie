@@ -1,5 +1,5 @@
 body {
-    background-image: url("./Images/portland.jpeg");
+    background-image: url("./Images/newYork.jpeg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -15,16 +15,17 @@ body {
 }
 
 #cityName {
-    color: whitesmoke;
+    color: #ffe2a7;
     /* background-color: orange; */
-    padding-top: 75%;
-    padding-bottom: 30%;
+    padding-top: 10%;
+    padding-bottom: 90%;
     padding-left: 15%;
     font-family: 'Rye', cursive;
   }
 
  #restaurantList {
-    color: eb2f68;
+    color: black;
     /* background-color: #eb2f68; */
+    font-weight: 800;
     font-family: 'Gruppo', cursive;
   }
