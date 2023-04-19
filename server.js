@@ -15,6 +15,7 @@ app.get('/', (req, res) => {
     res.render('home.ejs')
 })
 
+
 app.use('', portlandController);
 app.use('', newyorkController);
 
