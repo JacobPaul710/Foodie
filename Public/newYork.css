@@ -55,6 +55,12 @@ body {
     box-shadow: 0 12px 16px 0 whitesmoke;
   }
 
+  #addRestaurant {
+    border: 3px #fdda6e solid;
+    padding: 8px;
+    border-radius: 10px;
+  }
+
   #addRestaurantButton {
     font-size: 25px;
     font-family: 'Gruppo', cursive;
