@@ -17,12 +17,13 @@ body {
 }
 
 #cityName {
-    color: #fdb604;
+    color: whitesmoke;
     display: flex;
     justify-content: center;
     font-family: 'Rye', cursive;
+    /* font-size: larger; */
   }
-
+ 
  #restaurantList {
     color: black;
     font-weight: 800;
