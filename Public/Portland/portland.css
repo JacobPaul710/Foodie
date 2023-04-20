@@ -1,7 +1,8 @@
 body {
-    background-image: url("./Images/newYork.jpeg");
+    background-image: url("../Images/portland.jpeg");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,52 +12,33 @@ body {
 }
 
 #navDiv {
-    border: 3px #ffe2a7 solid;
-    padding: 8px;
-    border-radius: 10px;
+  border: 3px #eb2f68 solid;
+  padding: 8px;
+  border-radius: 10px;
+   
+
 }
 
 #cityName {
-    font-family: 'Tilt Prism', cursive;
-    color: #fdda6e;
+    color: whitesmoke;
     display: flex;
     justify-content: center;
-   font-size: larger;
-
+    font-family: 'Rye', cursive;
   }
 
  #restaurantList {
-    font-weight: 800;
-    font-family: 'Gruppo', cursive;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #black;
-    border: 5px #fdda6e solid;
-    border-radius: 10px;
-
-  }
-
-  #restaurantButton {
-    font-size: 25px;
+    color: whitesmoke;
     font-family: 'Gruppo', cursive;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    margin: 5%;
-    border-radius: 5px;
-    color: #black;
-    background-color: #fdda6e;
-  }
-
-  #RestaurantButton:hover {
-    background-color: #bfc5df;
-    color: black;
-    box-shadow: 0 12px 16px 0 whitesmoke;
+    border: 5px #eb2f68 solid;
+    border-radius: 10px;
   }
 
   #addRestaurant {
-    border: 3px #fdda6e solid;
+    border: 3px #eb2f68 solid;
     padding: 8px;
     border-radius: 10px;
   }
@@ -66,11 +48,26 @@ body {
     font-family: 'Gruppo', cursive;
     transition-duration: 0.4s;
     cursor: pointer;
-    color: black;
-    background-color: #fdda6e;
+    color: #eb2f68;
   }
 
   #addRestaurantButton:hover {
+    background-color: #bfc5df;
+    color: black;
+    box-shadow: 0 12px 16px 0 whitesmoke;
+  }
+
+  #restaurantButton {
+    font-size: 25px;
+    font-family: 'Gruppo', cursive;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin: 5%;
+    border-radius: 5px;
+    color: #eb2f68;
+  }
+
+  #RestaurantButton:hover {
     background-color: #bfc5df;
     color: black;
     box-shadow: 0 12px 16px 0 whitesmoke;

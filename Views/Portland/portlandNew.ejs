@@ -7,48 +7,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Portland/portlandNew.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/header.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <h1>Add a new restaurant!</h1>
+    <div id="welcomeDiv">
+        <h1>Use this form to add a restaurant!</h1>
+    </div>
 
-    <form action=“/portland” method=“POST”>
-    <label for=“city”> City:</label>
-    <input type=“text” name=“title” id=“title”> 
-    <br>
-    <label for=“restaurant”> Restaurant name:</label>
-        <input type=“text” name=“restaurant” id=“restaurant”>
-    <br>
-    <label for=“cuisine”> Cuisine:</label>
-        <input type=“text” name=“cuisine” id=“cuisine”>
-    <br>
-    <label for=“review”> Review:</label>
-        <input type=“text” name=“review” id=“review”>
-    <br>
-    <label for=“priceRange”> Price:</label>
-        <input type=“number” name=“priceRange” id=“priceRange”>
-    <br>
-    <label for=“weblink”> Web Link:</label>
-        <input type=“text” name=“webLink” id=“webLink”>
-    <br>
-    <label for=“menuItemOne”> Menu Item:</label>
-        <input type=“text” name=“menuItemOne” id=“menuItemOne”>
-    <br>
-    <label for=“menuItemTwo”> Menu Item:</label>
-        <input type=“text” name=“menuItemTwo” id=“menuItemTwo”>
-    <br>
-     <label for=“menuItemThree”> Menu Item:</label>
-        <input type=“text” name=“menuItemThree” id=“menuItemThree”>
-    <br>
-    <label for=“imageOne”> Menu Item:</label>
-        <input type=“text” name=“imageOne” id=“imageOne”>
-    <br>
-    <label for=“imageTwo”> Menu Item:</label>
-        <input type=“text” name=“imageTwo” id=“imageTwo”>
-    <br>
-    <label for=“imageThree”> Menu Item:</label>
-        <input type=“text” name=“imageThree” id=“imageThree”>
-    <br>
+    <div id="form">
+        <form action=“/portland” method=“POST”>
+            <select id="select" name="city">
+                <option value="Portland">Portland</option>
+                <option value="New York">New York</option>
+                <option value="New Orleans">New Orleans</option>
+            </select>
+            <br>
+            <input type=“text” name=“restaurant” id=“restaurant” placeholder="Restaurant Name">
+            <br>
+            <input type=“text” name=“cuisine” id=“cuisine” placeholder="Cuisine">
+            <br>
+            <input type=“text” name=“review” id=“review” placeholder="Leave a review!">
+            <br>
+            <input type=“number” name=“priceRange” id=“priceRange” placeholder="How much did you pay?">
+            <br>
+            <input type=“text” name=“webLink” id=“webLink” placeholder="Enter a link to the restaurant here!">
+            <br>
+            <input type=“text” name=“menuItemOne” id=“menuItemOne” placeholder="What did you order?">
+            <br>
+            <input type=“text” name=“imageOne” id=“imageOne” placeholder="Enter a link to a picture!">
+            <br>
+            <input type=“text” name=“menuItemTwo” id=“menuItemTwo” placeholder="Get anything else?">
+            <br>
+            <input type=“text” name=“imageTwo” id=“imageTwo” placeholder="Enter a link to a picture!">
+            <br>
+            <input type=“text” name=“menuItemThree” id=“menuItemThree” placeholder="Order again?">
+            <br>
+            <input type=“text” name=“imageThree” id=“imageThree” placeholder="Enter a link to a picture!">
+            <br>
+            <input id="finalNewRestaurantButton" type="submit" value="Add restaurant!">
+        </form>
+    </div>
     
 
 </body>
