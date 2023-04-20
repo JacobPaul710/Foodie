@@ -18,13 +18,18 @@
 
         <div id="cityName">
             <h1>New Orleans, Louisiana</h1>
-        </div>
 
         <div id="restaurantList">
             <h1>Popular New Orleans Restaurants</h1>
+            <% for(let i = 0; i < neworleans.length; i++) { %>
+                <a href="neworleans/<%= neworleans[i]._id %>">
+                    <h2><%= neworleans[i].restaurant %></h2>
+                </a>
+            <% } %>
+        </div>
         </div>
 
     </div>
-    
+    <a href="/neworleans/new"><button>Add a Restaurant</button></a>
 </body>
 </html>
