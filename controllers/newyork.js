@@ -59,7 +59,7 @@ router.get('/newyork', async (req, res, next) => {
 })
 
 router.get('/newyork/new', (req, res) => {
-    res.render('newyork/new.ejs');
+    res.render('newyork/newYorkNew.ejs');
 })
 
 router.get('/newyork/seed/', async (req, res, next) => {

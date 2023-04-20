@@ -1,5 +1,5 @@
 body {
-    background-image: url("../Images/portland.jpeg");
+    background-image: url("../Images/newYork.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -11,62 +11,63 @@ body {
 }
 
 #navDiv {
-    border: 3px #eb2f68 solid;
+    border: 3px #ffe2a7 solid;
     padding: 8px;
     border-radius: 10px;
 }
 
 #welcomeDiv{
-    border: 3px #eb2f68 solid;
+    border: 3px #fdda6e solid;
     padding: 8px;
     border-radius: 10px;
-    font-family: 'Rye', cursive;
+    font-family: 'Tilt Prism', cursive;
     color: whitesmoke;
-    margin-top:  2%;
-    font-size: 85%;
+    margin-top:  1%;
 }
 
 #formDiv {
-    border: 5px #eb2f68 solid;
-    padding: 8% 10% 10% 8%;
+    border: 5px #fdda6e solid;
+    padding: 8px;
     border-radius: 10px;
     margin-top:  15%;
     font-family: 'Gruppo', cursive;
     text-align: center;
+    padding: 9%;
     font-size: 175%;
+    
     
 }
 
 label {
-    color: #eb2f68;
-}
-
-
-#form {
-
-}
-
-#select {
-    color: #eb2f68;
-    font-family: 'Gruppo', cursive;
-    font-size: 80%;
-    text-align: center;
-    background-color: transparent;
-}
-
-::placeholder {
     color: whitesmoke;
-    font-family: 'Gruppo', cursive;
-    font-weight: bolder;
+}
+
+form {
+    
 }
 
 input {
-    border: black solid 1px;
+    border: white solid 2px;
     font-size: 80%;
     width: 250px;
     text-align: center;
     background-color: transparent;
     
+}
+
+#select {
+    /* color: #4a2a2a; */
+    font-family: 'Gruppo', cursive;
+    font-size: 80%;
+    text-align: center;
+    background-color: transparent;
+    color: whitesmoke;
+}
+
+::placeholder {
+    /* color: #4a2a2a; */
+    font-family: 'Gruppo', cursive;
+    color: whitesmoke;
 }
 
 #finalNewRestaurantButton {
