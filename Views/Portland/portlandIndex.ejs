@@ -22,10 +22,15 @@
 
         <div id="restaurantList">
             <h1>Popular Portland Restaurants</h1>
+            <% for(let i = 0; i < portland.length; i++) { %>
+                <a href="portland/<%= portland[i]._id %>">
+                    <h2><%= portland[i].restaurant %></h2>
+                </a>
+            <% } %>
         </div>
 
     </div>
-    
+    <a href="/portland/new"><button>Add a Restaurant</button></a>
     <a href="/portland/seed/">Seed Route Test</a>
 
 </body>
