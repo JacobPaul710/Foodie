@@ -61,7 +61,7 @@ router.get('/portland', async (req, res, next) => {
     }
 })
 
-router.get('/porland/new', (req, res) => {
+router.get('/portland/new', (req, res) => {
     res.render('portland/portlandNew.ejs');
 })
 

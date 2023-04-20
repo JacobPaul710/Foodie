@@ -8,11 +8,14 @@ body {
     align-items: center;
     margin: 0;
     height: 100vh;
-    /* justify-content: space-around; */
+    justify-content: space-between;
 }
 
 #navDiv {
-    /* background-color: black; */
+  border: 3px #eb2f68 solid;
+  padding: 8px;
+   
+
 }
 
 #cityName {
@@ -31,11 +34,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #eb2f68;
+    color: whitesmoke;
     font-family: 'Gruppo', cursive;
     border: 5px #eb2f68 solid;
     border-radius: 10px;
-
   }
 
   #addRestaurant {
@@ -47,6 +49,7 @@ body {
     font-family: 'Gruppo', cursive;
     transition-duration: 0.4s;
     cursor: pointer;
+    color: #eb2f68;
   }
 
   #addRestaurantButton:hover {
@@ -62,6 +65,7 @@ body {
     cursor: pointer;
     margin: 5%;
     border-radius: 5px;
+    color: #eb2f68;
   }
 
   #RestaurantButton:hover {
