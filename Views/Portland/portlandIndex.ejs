@@ -24,13 +24,18 @@
             <h1>Popular Portland Restaurants</h1>
             <% for(let i = 0; i < portland.length; i++) { %>
                 <a href="portland/<%= portland[i]._id %>">
-                    <h2><%= portland[i].restaurant %></h2>
+                    <button id="restaurantButton"><%= portland[i].restaurant %></button>
                 </a>
             <% } %>
         </div>
 
+        
     </div>
-    <a href="/portland/new"><button>Add a Restaurant</button></a>
+
+    <div id="addRestaurant">
+        <a href="/portland/new"><button id="addRestaurantButton">Add a restaurant!</button></a>
+    </div>
+
     <a href="/portland/seed/">Seed Route Test</a>
 
 </body>

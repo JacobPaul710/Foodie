@@ -5,7 +5,9 @@ const methodOverride = require('method-override');
 const portlandController = require('./controllers/portland');
 const newyorkController = require('./controllers/newyork');
 const neworleansController = require('./controllers/neworleans');
-const PORT = 5001;
+
+
+const PORT = 4000;
 
 app.set('view engine', 'ejs');
 

@@ -53,6 +53,8 @@ router.get('/portland', async (req, res, next) => {
         const pdxRestaurants = await portland.find({});
         console.log(portland);
         res.render('portland/portlandIndex.ejs', {portland: pdxRestaurants});
+        console.log(pdxRestaurants);
+        // console.log(portland.restaurant);
     } catch(err) {
         console.log(err);
         next();
@@ -60,7 +62,7 @@ router.get('/portland', async (req, res, next) => {
 })
 
 router.get('/porland/new', (req, res) => {
-    res.render('portland/new.ejs');
+    res.render('portland/portlandNew.ejs');
 })
 
 router.get('/portland/seed/', async (req, res, next) => {
