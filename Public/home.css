@@ -13,6 +13,7 @@ body {
 #navDiv {
     border: solid 3px whitesmoke;
     padding: 8px;
+    border-radius: 2px;
     
 }
 
