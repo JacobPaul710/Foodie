@@ -2,29 +2,73 @@ body {
     background-image: url("./Images/portland.jpeg");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0;
     height: 100vh;
-    /* justify-content: space-around; */
+    justify-content: space-between;
 }
 
 #navDiv {
-    /* background-color: black; */
+  border: 3px #eb2f68 solid;
+  padding: 8px;
+  border-radius: 10px;
+   
+
 }
 
 #cityName {
     color: whitesmoke;
-    /* background-color: orange; */
-    padding-top: 75%;
-    padding-bottom: 30%;
-    padding-left: 15%;
+    display: flex;
+    justify-content: center;
     font-family: 'Rye', cursive;
   }
 
  #restaurantList {
-    color: eb2f68;
-    /* background-color: #eb2f68; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
     font-family: 'Gruppo', cursive;
+    border: 5px #eb2f68 solid;
+    border-radius: 10px;
+  }
+
+  #addRestaurant {
+    border: 3px #eb2f68 solid;
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  #addRestaurantButton {
+    font-size: 25px;
+    font-family: 'Gruppo', cursive;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    color: #eb2f68;
+  }
+
+  #addRestaurantButton:hover {
+    background-color: #bfc5df;
+    color: black;
+    box-shadow: 0 12px 16px 0 whitesmoke;
+  }
+
+  #restaurantButton {
+    font-size: 25px;
+    font-family: 'Gruppo', cursive;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin: 5%;
+    border-radius: 5px;
+    color: #eb2f68;
+  }
+
+  #RestaurantButton:hover {
+    background-color: #bfc5df;
+    color: black;
+    box-shadow: 0 12px 16px 0 whitesmoke;
   }
