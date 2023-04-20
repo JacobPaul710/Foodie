@@ -14,16 +14,13 @@ body {
 #navDiv {
   border: 3px #eb2f68 solid;
   padding: 8px;
+  border-radius: 10px;
    
 
 }
 
 #cityName {
     color: whitesmoke;
-    /* background-color: orange; */
-    /* padding-top: 75%;
-    padding-bottom: 30%;
-    padding-left: 15%; */
     display: flex;
     justify-content: center;
     font-family: 'Rye', cursive;
@@ -41,7 +38,9 @@ body {
   }
 
   #addRestaurant {
-
+    border: 3px #eb2f68 solid;
+    padding: 8px;
+    border-radius: 10px;
   }
 
   #addRestaurantButton {

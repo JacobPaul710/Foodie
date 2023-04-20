@@ -24,13 +24,15 @@
             <h1>Popular Brooklyn Restaurants</h1>
             <% for(let i = 0; i < newyork.length; i++) { %>
                 <a href="newyork/<%= newyork[i]._id %>">
-                    <h2><%= newyork[i].restaurant %></h2>
+                    <button id="restaurantButton"><%= newyork[i].restaurant %></button>
                 </a>
             <% } %>
         </div>
 
     </div>
-    <a href="/newyork/new"><button>Add a Restaurant</button></a>
+    <div id="addRestaurant">
+        <a href="/newyork/new"><button id="addRestaurantButton">Add a restaurant!</button></a>
+    </div>
     <a href="/newYork/seed/">Seed Route Test</a>
 
 </body>
