@@ -47,7 +47,7 @@ const nySeed = [
     }
 ];
 
-router.get('/newyork', async (req, res, next) => {
+router.get('/', async (req, res, next) => {
     try {
         const nycRestaurants = await newyork.find({});
         // console.log(newyork);
@@ -58,11 +58,11 @@ router.get('/newyork', async (req, res, next) => {
     }
 })
 
-router.get('/newyork/new', (req, res) => {
+router.get('/new', (req, res) => {
     res.render('newyork/newYorkNew.ejs');
 })
 
-router.get('/newyork/seed/', async (req, res, next) => {
+router.get('/seed/', async (req, res, next) => {
     try {
         await newyork.deleteMany({});
         await newyork.insertMany(nySeed);
@@ -73,7 +73,7 @@ router.get('/newyork/seed/', async (req, res, next) => {
     }
 })
 
-router.get('/newyork/:id', async (req, res, next) => {
+router.get('/:id', async (req, res, next) => {
     try {
         const nycRestaurant = await newyork.findById(req.params.id);
         res.render('newyork/newYorkShow.ejs', {singleNewYork: nycRestaurant});
@@ -83,7 +83,7 @@ router.get('/newyork/:id', async (req, res, next) => {
     }
 })
 
-router.post('/newyork', async (req, res, next) => {
+router.post('/', async (req, res, next) => {
     try {
         console.log("Post route called");
         console.log(req.body);
@@ -96,7 +96,7 @@ router.post('/newyork', async (req, res, next) => {
     }
 })
 
-router.get('/newyork/:id/edit', async (req, res, next) => {
+router.get('/:id/edit', async (req, res, next) => {
     try {
         const nyRestoToEdit = await newyork.findById(req.params.id);
         console.log(nyRestoToEdit);
@@ -107,7 +107,7 @@ router.get('/newyork/:id/edit', async (req, res, next) => {
     }
 })
 
-router.put('/newyork/:id', async (req, res, next) => {
+router.put('/:id', async (req, res, next) => {
     try {
         const updatedNy = await newyork.findByIdAndUpdate(req.params.id, req.body);
         console.log(updatedNy);
@@ -118,18 +118,18 @@ router.put('/newyork/:id', async (req, res, next) => {
     }
 })
 
-router.get('/newyork/:id/delete', async (req, res, next) => {
+router.get('/:id/delete', async (req, res, next) => {
     try {
         const nyRestoToDelete = await newyork.findById(req.params.id);
         console.log(nyRestoToDelete);
-        res.render('newyork/delete.ejs', {singleNewYork: nyRestoToDelete});
+        res.render('newyork/newYorkDelete.ejs', {singleNewYork: nyRestoToDelete});
     } catch(err) {
         console.log(err);
         next();
     }
 })
 
-router.delete('/newyork/:id', async (req, res, next) => {
+router.delete('/:id', async (req, res, next) => {
     try {
         const deletedNy = await newyork.findByIdAndDelete(req.params.id);
         console.log(deletedNy);
