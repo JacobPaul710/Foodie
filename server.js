@@ -15,9 +15,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/Public'));
 app.use(methodOverride('_method'));
 
-app.use('', neworleansController); 
+app.use('/newOrleans', neworleansController); 
 app.use('/portland', portlandController);
-app.use('', newyorkController);
+app.use('/newYork', newyorkController);
 
 app.get('/', (req, res) => {
     res.render('home.ejs')
