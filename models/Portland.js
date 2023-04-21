@@ -10,10 +10,10 @@ const portlandSchema = new mongoose.Schema(
         priceRange: Number,
         webLink: String,
         menuItemOne: String,
-        menuItemTwo: String,
-        menuItemThree: String,
         imgOne: String,
+        menuItemTwo: String,
         imgTwo: String,
+        menuItemThree: String,
         imgThree: String
     },
     {
