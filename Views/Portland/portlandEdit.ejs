@@ -24,34 +24,45 @@
 
     <div id="formDiv">
         <form action="/portland/<%= singlePortland._id %>?_method=PUT">
-            <label for="city">Select a city</label>
+            <!-- <label for="city">Select a city</label>
             <br>
             <select id="select" name="city">
                 <option value="Portland">Portland</option>
                 <option value="New York">New York</option>
                 <option value="New Orleans">New Orleans</option>
-            </select>
+            </select> -->
             <br>
+            <label for="restaurant">Restaurant name: </label>
             <input type="text" name="restaurant" id="restaurant" value=<%= singlePortland.restaurant %>>
             <br>
+            <label for="cuisine">Cuisine: </label>
             <input type="text" name="cuisine" id="cuisine" value=<%= singlePortland.cuisine %>>
             <br>
+            <label for="review">Restaurant review: </label>
             <input type="text" name="review" id="review" value=<%= singlePortland.review %>>
             <br>
+            <label for="priceRange">Price range: </label>
             <input type="number" name="priceRange" id="priceRange" value=<%= singlePortland.priceRange %>>
             <br>
+            <label for="webLink">Restaurant website: </label>
             <input type="text" name="webLink" id="webLink" value=<%= singlePortland.webLink %>>
             <br>
+            <label for="menuItemOne">Menu item one: </label>
             <input type="text" name="menuItemOne" id="menuItemOne" value=<%= singlePortland.menuItemOne %>>
             <br>
+            <label for="imgOne">Photo link one: </label>
             <input type="text" name="imgOne" id="imgOne" value=<%= singlePortland.imgOne %>>
             <br>
+            <label for="menuItemTwo">Menu item two: </label>
             <input type="text" name="menuItemTwo" id="menuItemTwo" value=<%= singlePortland.menuItemTwo %>>
             <br>
+            <label for="imgTwo">Photo link two: </label>
             <input type="text" name="imgTwo" id="imgTwo" value=<%= singlePortland.imgTwo %>>
             <br>
+            <label for="menuItemThree">Menu item three: </label>
             <input type="text" name="menuItemThree" id="menuItemThree" value=<%= singlePortland.menuItemThree %>>
             <br>
+            <label for="imgThree">Photo link three: </label>
             <input type="text" name="imgThree" id="imgThree" value=<%= singlePortland.imgThree %>>
             <br>
             <input id="finalNewRestaurantButton" type="submit" value="Edit this restaurant listing">
