@@ -50,7 +50,7 @@ const nySeed = [
 router.get('/newyork', async (req, res, next) => {
     try {
         const nycRestaurants = await newyork.find({});
-        console.log(newyork);
+        // console.log(newyork);
         res.render('newyork/newYorkIndex.ejs', {newyork: nycRestaurants});
     } catch(err) {
         console.log(err);
@@ -85,9 +85,11 @@ router.get('/newyork/:id', async (req, res, next) => {
 
 router.post('/newyork', async (req, res, next) => {
     try {
+        console.log("Post route called");
+        console.log(req.body);
         const newRestoNy = await newyork.create(req.body);
         console.log(newRestoNy);
-        res.redirect('/newyork')
+        res.redirect('/newyork');
     } catch(err) {
         console.log(err);
         next();

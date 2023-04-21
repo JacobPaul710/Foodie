@@ -48,12 +48,13 @@ const pdxSeed = [
     }
 ];
 
-router.get('/portland', async (req, res, next) => {
+
+router.get('/', async (req, res, next) => {
     try {
         const pdxRestaurants = await portland.find({});
-        console.log(portland);
+        // console.log(portland);
         res.render('portland/portlandIndex.ejs', {portland: pdxRestaurants});
-        console.log(pdxRestaurants);
+        // console.log(pdxRestaurants);
         // console.log(portland.restaurant);
     } catch(err) {
         console.log(err);
@@ -61,11 +62,13 @@ router.get('/portland', async (req, res, next) => {
     }
 })
 
-router.get('/portland/new', (req, res) => {
+router.get('/new', (req, res) => {
     res.render('portland/portlandNew.ejs');
 })
 
-router.get('/portland/seed/', async (req, res, next) => {
+
+
+router.get('/seed', async (req, res, next) => {
     try {
         await portland.deleteMany({});
         await portland.insertMany(pdxSeed);
@@ -76,17 +79,7 @@ router.get('/portland/seed/', async (req, res, next) => {
     }
 })
 
-router.get('/portland/:id', async (req, res, next) => {
-    try {
-        const pdxRestaurant = await portland.findById(req.params.id);
-        res.render('portland/show.ejs', {singlePortland: pdxRestaurant});
-    } catch(err) {
-        console.log(err);
-        next();
-    }
-})
-
-router.post('/portland', async (req, res, next) => {
+router.post('/', async (req, res, next) => {
     try {
         const newRestoPdx = await portland.create(req.body);
         console.log(newRestoPdx);
@@ -97,7 +90,19 @@ router.post('/portland', async (req, res, next) => {
     }
 })
 
-router.get('/portland/:id/edit', async (req, res, next) => {
+
+router.get('/:id', async (req, res, next) => {
+    try {
+        const pdxRestaurant = await portland.findById(req.params.id);
+        res.render('portland/show.ejs', {singlePortland: pdxRestaurant});
+    } catch(err) {
+        console.log(err);
+        next();
+    }
+})
+
+
+router.get('/:id/edit', async (req, res, next) => {
     try {
         const pdxRestoToEdit = await portland.findById(req.params.id);
         console.log(pdxRestoToEdit);
@@ -108,7 +113,7 @@ router.get('/portland/:id/edit', async (req, res, next) => {
     }
 })
 
-router.put('portland/:id', async (req, res, next) => {
+router.put('/:id', async (req, res, next) => {
     try {
         updatedPdx = await portland.findByIdAndUpdate(req.params.id, req.body);
         console.log(updatedPdx);
@@ -119,7 +124,7 @@ router.put('portland/:id', async (req, res, next) => {
     }
 })
 
-router.get('/portland/:id/delete', async (req, res, next) => {
+router.get('/:id/delete', async (req, res, next) => {
     try {
         const pdxRestoToDelete = await portland.findByIdAndDelete(req.params.id);
         console.log(pdxRestoToDelete);
@@ -130,7 +135,7 @@ router.get('/portland/:id/delete', async (req, res, next) => {
     }
 })
 
-router.delete('/portland/:id', async (req, res, next) => {
+router.delete('/:id', async (req, res, next) => {
     try {
         const deletedPdx = await portland.findByIdAndDelete(req.params.id);
         console.log(deletedPdx);

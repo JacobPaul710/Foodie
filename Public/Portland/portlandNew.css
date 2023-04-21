@@ -52,7 +52,13 @@ label {
     font-size: 80%;
     text-align: center;
     background-color: transparent;
+    outline: none;
 }
+
+#select:focus {
+    border: 3px solid #eb2f68;
+  }
+
 
 ::placeholder {
     color: whitesmoke;
@@ -66,8 +72,12 @@ input {
     width: 250px;
     text-align: center;
     background-color: transparent;
-    
+    outline: none;
 }
+
+input:focus {
+    border: 3px solid #eb2f68;
+  }
 
 #finalNewRestaurantButton {
     font-size: 25px;

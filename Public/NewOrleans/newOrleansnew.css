@@ -51,9 +51,14 @@ input {
     font-size: 80%;
     width: 250px;
     text-align: center;
+    outline: none;
     /* background-color: transparent; */
     
 }
+
+input:focus {
+    border: 3px solid #fdb604;
+  }
 
 #select {
     /* color: #4a2a2a; */
@@ -62,7 +67,12 @@ input {
     text-align: center;
     /* background-color: transparent; */
     color: #047648;
+    outline: none;
 }
+
+#select:focus {
+    border: 3px solid #fdb604;
+  }
 
 ::placeholder {
     /* color: #4a2a2a; */
