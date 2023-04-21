@@ -100,7 +100,7 @@ router.get('/newyork/:id/edit', async (req, res, next) => {
     try {
         const nyRestoToEdit = await newyork.findById(req.params.id);
         console.log(nyRestoToEdit);
-        res.render('newyork/edit.ejs', {singleNewYork: nyRestoToEdit})
+        res.render('newyork/newYorkEdit.ejs', {singleNewYork: nyRestoToEdit})
     } catch(err) {
         console.log(err);
         next();
