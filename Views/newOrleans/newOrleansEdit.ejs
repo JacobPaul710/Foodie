@@ -1,0 +1,70 @@
+<div id="navDiv">
+    <%- include('../header.ejs') %>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/newOrleans/newOrleansnew.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div id="welcomeDiv">
+        <h1>Edit the listing for <%= singleNewOrleans.restaurant %> below.</h1>
+    </div>
+
+    <div id="formDiv">
+        <form action="/portland/<%= singleNewOrleans._id %>?_method=PUT">
+            <!-- <label for="city">Select a city</label>
+            <br>
+            <select id="select" name="city">
+                <option value="Portland">Portland</option>
+                <option value="New York">New York</option>
+                <option value="New Orleans">New Orleans</option>
+            </select> -->
+            <br>
+            <label for="restaurant">Restaurant name: </label>
+            <input type="text" name="restaurant" id="restaurant" value=<%= singleNewOrleans.restaurant %>>
+            <br>
+            <label for="cuisine">Cuisine: </label>
+            <input type="text" name="cuisine" id="cuisine" value=<%= singleNewOrleans.cuisine %>>
+            <br>
+            <label for="review">Restaurant review: </label>
+            <input type="text" name="review" id="review" value=<%= singleNewOrleans.review %>>
+            <br>
+            <label for="priceRange">Price range: </label>
+            <input type="number" name="priceRange" id="priceRange" value=<%= singleNewOrleans.priceRange %>>
+            <br>
+            <label for="webLink">Restaurant website: </label>
+            <input type="text" name="webLink" id="webLink" value=<%= singleNewOrleans.webLink %>>
+            <br>
+            <label for="menuItemOne">Menu item one: </label>
+            <input type="text" name="menuItemOne" id="menuItemOne" value=<%= singleNewOrleans.menuItemOne %>>
+            <br>
+            <label for="imgOne">Photo link one: </label>
+            <input type="text" name="imgOne" id="imgOne" value=<%= singleNewOrleans.imgOne %>>
+            <br>
+            <label for="menuItemTwo">Menu item two: </label>
+            <input type="text" name="menuItemTwo" id="menuItemTwo" value=<%= singleNewOrleans.menuItemTwo %>>
+            <br>
+            <label for="imgTwo">Photo link two: </label>
+            <input type="text" name="imgTwo" id="imgTwo" value=<%= singleNewOrleans.imgTwo %>>
+            <br>
+            <label for="menuItemThree">Menu item three: </label>
+            <input type="text" name="menuItemThree" id="menuItemThree" value=<%= singleNewOrleans.menuItemThree %>>
+            <br>
+            <label for="imgThree">Photo link three: </label>
+            <input type="text" name="imgThree" id="imgThree" value=<%= singleNewOrleans.imgThree %>>
+            <br>
+            <input id="finalNewRestaurantButton" type="submit" value="Edit this restaurant listing">
+        </form>
+    </div>
+    
+
+</body>
+</html>
