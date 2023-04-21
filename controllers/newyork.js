@@ -76,7 +76,7 @@ router.get('/newyork/seed/', async (req, res, next) => {
 router.get('/newyork/:id', async (req, res, next) => {
     try {
         const nycRestaurant = await newyork.findById(req.params.id);
-        res.render('newyork/show.ejs', {singleNewYork: nycRestaurant});
+        res.render('newyork/newYorkShow.ejs', {singleNewYork: nycRestaurant});
     } catch(err) {
         console.log(err);
         next();
