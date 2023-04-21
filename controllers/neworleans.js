@@ -120,7 +120,7 @@ router.get('/neworleans/:id/delete', async (req, res, next) => {
     try {
         const nolaRestoToDelete = await neworleans.findById(req.params.id);
         console.log(nolaRestoToDelete);
-        res.render('neworleans/delete.ejs', {singleNewOrleans: nolaRestoToDelete});
+        res.render('neworleans/newOrleansDelete.ejs', {singleNewOrleans: nolaRestoToDelete});
     } catch(err) {
         console.log(err);
         next();

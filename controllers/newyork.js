@@ -122,7 +122,7 @@ router.get('/newyork/:id/delete', async (req, res, next) => {
     try {
         const nyRestoToDelete = await newyork.findById(req.params.id);
         console.log(nyRestoToDelete);
-        res.render('newyork/delete.ejs', {singleNewYork: nyRestoToDelete});
+        res.render('newyork/newYorkDelete.ejs', {singleNewYork: nyRestoToDelete});
     } catch(err) {
         console.log(err);
         next();

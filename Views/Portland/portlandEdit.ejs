@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/NewYork/newYorkNew.css">
+    <link rel="stylesheet" href="/Portland/portlandNew.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
@@ -19,11 +19,11 @@
 </head>
 <body>
     <div id="welcomeDiv">
-        <h1>Use this form to add a restaurant!</h1>
+        <h1>Edit the listing for <%= singlePortland.restaurant %> below.</h1>
     </div>
 
     <div id="formDiv">
-        <form action="/newyork" method="POST">
+        <form action="/portland/<%= singlePortland._id %>?_method=PUT">
             <label for="city">Select a city</label>
             <br>
             <select id="select" name="city">
@@ -32,29 +32,29 @@
                 <option value="New Orleans">New Orleans</option>
             </select>
             <br>
-            <input type="text" name="restaurant" id="restaurant" placeholder="Restaurant Name">
+            <input type="text" name="restaurant" id="restaurant" value=<%= singlePortland.restaurant %>>
             <br>
-            <input type="text" name="cuisine" id="cuisine" placeholder="Cuisine">
+            <input type="text" name="cuisine" id="cuisine" value=<%= singlePortland.cuisine %>>
             <br>
-            <input type="text" name="review" id="review" placeholder="Leave a review!" >
+            <input type="text" name="review" id="review" value=<%= singlePortland.review %>>
             <br>
-            <input type="number" name="priceRange" id="priceRange" placeholder="How much did you pay?">
+            <input type="number" name="priceRange" id="priceRange" value=<%= singlePortland.priceRange %>>
             <br>
-            <input type="text" name="webLink" id="webLink" placeholder="Enter a link to the restaurant here!">
+            <input type="text" name="webLink" id="webLink" value=<%= singlePortland.webLink %>>
             <br>
-            <input type="text" name="menuItemOne" id="menuItemOne" placeholder="What did you order?">
+            <input type="text" name="menuItemOne" id="menuItemOne" value=<%= singlePortland.menuItemOne %>>
             <br>
-            <input type="text" name="imgOne" id="imgOne" placeholder="Enter a link to a picture!">
+            <input type="text" name="imgOne" id="imgOne" value=<%= singlePortland.imgOne %>>
             <br>
-            <input type="text" name="menuItemTwo" id="menuItemTwo" placeholder="Get anything else?">
+            <input type="text" name="menuItemTwo" id="menuItemTwo" value=<%= singlePortland.menuItemTwo %>>
             <br>
-            <input type="text" name="imgTwo" id="imgTwo" placeholder="Enter a link to a picture!">
+            <input type="text" name="imgTwo" id="imgTwo" value=<%= singlePortland.imgTwo %>>
             <br>
-            <input type="text" name="menuItemThree" id="menuItemThree" placeholder="Order again?">
+            <input type="text" name="menuItemThree" id="menuItemThree" value=<%= singlePortland.menuItemThree %>>
             <br>
-            <input type="text" name="imgThree" id="imgThree" placeholder="Enter a link to a picture!">
+            <input type="text" name="imgThree" id="imgThree" value=<%= singlePortland.imgThree %>>
             <br>
-            <input id="finalNewRestaurantButton" type="submit" value="Add restaurant!">
+            <input id="finalNewRestaurantButton" type="submit" value="Edit this restaurant listing">
         </form>
     </div>
     

@@ -127,7 +127,7 @@ router.put('/:id', async (req, res, next) => {
 
 router.get('/:id/delete', async (req, res, next) => {
     try {
-        const pdxRestoToDelete = await portland.findByIdAndDelete(req.params.id);
+        const pdxRestoToDelete = await portland.findById(req.params.id);
         console.log(pdxRestoToDelete);
         res.render('portland/portlandDelete.ejs', {singlePortland: pdxRestoToDelete})
     } catch(err) {
