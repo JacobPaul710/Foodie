@@ -103,7 +103,7 @@ router.get('/portland/:id/edit', async (req, res, next) => {
     try {
         const pdxRestoToEdit = await portland.findById(req.params.id);
         console.log(pdxRestoToEdit);
-        res.render('portland/ejs', {singlePortland: pdxRestoToEdit});
+        res.render('portland/portlandEdit.ejs', {singlePortland: pdxRestoToEdit});
     } catch(err) {
         console.log(err);
         next();
@@ -125,7 +125,7 @@ router.get('/portland/:id/delete', async (req, res, next) => {
     try {
         const pdxRestoToDelete = await portland.findByIdAndDelete(req.params.id);
         console.log(pdxRestoToDelete);
-        res.render('portland/delete.ejs', {singlePortland: pdxRestoToDelete})
+        res.render('portland/portlandDelete.ejs', {singlePortland: pdxRestoToDelete})
     } catch(err) {
         console.log(err);
         next();

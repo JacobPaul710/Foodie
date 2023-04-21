@@ -15,13 +15,14 @@
         <p><%= singlePortland.review %></p>
     </div>
     <div class="info">
-        <ul>
-            <li><%= singlePortland.cuisine %></li>
-            <li><%= singlePortland.priceRange %></li>
-            <li><%= singlePortland.webLink %></li>
-        </ul>
+        <p>Cuisine: <%= singlePortland.cuisine %></p>
+        <p>Price range: <%= singlePortland.priceRange %></p>
+        <a href=<%= singlePortland.webLink %>>Visit restaurant website</a> 
     </div>
+    <br>
     <div class="menu-items">
+        <h2>Featured Menu Items:</h2>
+        <br>
         <h3><%= singlePortland.menuItemOne %></h3>
         <img src=<%= singlePortland.imgOne %> alt="food photo1">
         <br>
