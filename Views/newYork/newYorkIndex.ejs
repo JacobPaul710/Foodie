@@ -23,7 +23,7 @@
         <div id="restaurantList">
             <h1>Popular Brooklyn Restaurants</h1>
             <% for(let i = 0; i < newyork.length; i++) { %>
-                <a href="newyork/<%= newyork[i]._id %>">
+                <a href="/newyork/<%= newyork[i]._id %>">
                     <button id="restaurantButton"><%= newyork[i].restaurant %></button>
                 </a>
             <% } %>

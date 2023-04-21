@@ -1,0 +1,38 @@
+<div id="navDiv">
+    <%- include('../header.ejs') %>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Name</title>
+</head>
+<body>
+    <h1><%= singleNewYork.restaurant %></h1>
+    <div class="blurb">
+        <p><%= singleNewYork.review %></p>
+    </div>
+    <div class="info">
+        <p>Cuisine: <%= singleNewYork.cuisine %></p>
+        <p>Price range: <%= singleNewYork.priceRange %></p>
+        <a href=<%= singleNewYork.webLink %>>Visit restaurant website</a> 
+    </div>
+    <br>
+    <div class="menu-items">
+        <h2>Featured Menu Items:</h2>
+        <br>
+        <h3><%= singleNewYork.menuItemOne %></h3>
+        <img src=<%= singleNewYork.imgOne %> alt="food photo1">
+        <br>
+        <h3><%= singleNewYork.menuItemTwo %></h3>
+        <img src=<%= singleNewYork.imgTwo %> alt="food photo2">
+        <br>
+        <h3><%= singleNewYork.menuItemThree %></h3>
+        <img src=<%= singleNewYork.imgThree %> alt="food photo3">
+        <br>
+    </div>
+    <a href=<%= singleNewYork._id %>>Delete this restaurant</a>
+</body>
+</html>

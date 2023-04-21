@@ -79,22 +79,7 @@ router.get('/seed', async (req, res, next) => {
     }
 })
 
-<<<<<<< HEAD
 router.post('/', async (req, res, next) => {
-=======
-router.get('/portland/:id', async (req, res, next) => {
-    try {
-        console.log("Here's the SHOW PAGE")
-        const pdxRestaurant = await portland.findById(req.params.id);
-        res.render('portland/portlandShow.ejs', {singlePortland: pdxRestaurant});
-    } catch(err) {
-        console.log(err);
-        next();
-    }
-})
-
-router.post('/portland', async (req, res, next) => {
->>>>>>> 10c0b28ebec3d37a8f599ce4c6ea7d902c984a66
     try {
         console.log(req.body);
         const newRestoPdx = await portland.create(req.body);
@@ -110,7 +95,7 @@ router.post('/portland', async (req, res, next) => {
 router.get('/:id', async (req, res, next) => {
     try {
         const pdxRestaurant = await portland.findById(req.params.id);
-        res.render('portland/show.ejs', {singlePortland: pdxRestaurant});
+        res.render('portland/portlandShow.ejs', {singlePortland: pdxRestaurant});
     } catch(err) {
         console.log(err);
         next();

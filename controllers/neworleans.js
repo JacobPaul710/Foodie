@@ -76,7 +76,7 @@ router.get('/neworleans/seed/', async (req, res, next) => {
 router.get('/neworleans/:id', async (req, res, next) => {
     try {
         const nolaRestaurant = await neworleans.findById(req.params.id);
-        res.render('neworleans/show.ejs', {singleNewOrleans: nolaRestaurant});
+        res.render('neworleans/newOrleansShow.ejs', {singleNewOrleans: nolaRestaurant});
     } catch(err) {
         console.log(err);
         next();
