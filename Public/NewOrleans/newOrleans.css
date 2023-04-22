@@ -10,7 +10,7 @@ body {
     justify-content: space-between;
 }
 
-#navDiv {
+#navDiv { 
     border: 3px #fdb604 solid;
     padding: 8px;
     border-radius: 10px;

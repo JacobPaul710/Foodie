@@ -11,15 +11,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/newOrleans/newOrleansDelete.css" type="text/css">
     <title>Document</title>
 </head>
 <body>
-<h2>Do you want to delete <%= singleNewOrleans.restaurant %>?</h2>
-<form method="POST" action="/neworleans/<%= singleNewOrleans._id %>?_method=DELETE">
-    <input type="submit" value="Yes, get rid of it!">
-</form>
-<a href="/neworleans/<%= singleNewOrleans._id %>">
-    <button>No, I love that place!</button>
+<div id="form">
+    <h2>Do you want to delete <%= singleNewOrleans.restaurant %>?</h2>
+        <form method="POST" action="/neworleans/<%= singleNewOrleans._id %>?_method=DELETE">
+            <input class="buttons" type="submit" value="Yes, get rid of it!">
+        </form>
+         <a href="/neworleans/<%= singleNewOrleans._id %>">
+        <button class="buttons">No, I love that place!</button>
+</div>
 </a>
 </body>
 </html>

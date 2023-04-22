@@ -14,32 +14,38 @@
     <title>Restaurant Name</title>
 </head>
 <body>
-    <div id="restaurantDiv">
-        <h1><%= singleNewOrleans.restaurant %></h1>
-    </div>
-    <div id="reviewDiv">
-        <p><%= singleNewOrleans.review %></p>
-    </div>
-    <div id="infoDiv">
-        <p>Cuisine: <%= singleNewOrleans.cuisine %></p>
-        <p>Price range: <%= singleNewOrleans.priceRange %></p>
-        <a href=<%= singleNewOrleans.webLink %>>Visit restaurant website</a> 
-    </div>
-    <br>
-    <div class="menu-items">
-        <h2>Featured Menu Items:</h2>
+    <div id="container">
+        <div id="test">
+            <div id="restaurantDiv">
+                <h1><%= singleNewOrleans.restaurant %></h1>
+            </div>
+            <div id="reviewDiv">
+                <p><%= singleNewOrleans.review %></p>
+            </div>
+            <div id="infoDiv">
+                <p>Cuisine: <%= singleNewOrleans.cuisine %></p>
+                <p>Price range: <%= singleNewOrleans.priceRange %></p>
+                <a href=<%= singleNewOrleans.webLink %>>Visit restaurant website</a> 
+            </div>
+        </div>
         <br>
-        <h3><%= singleNewOrleans.menuItemOne %></h3>
-        <img src=<%= singleNewOrleans.imgOne %> alt="food photo1">
-        <br>
-        <h3><%= singleNewOrleans.menuItemTwo %></h3>
-        <img src=<%= singleNewOrleans.imgTwo %> alt="food photo2">
-        <br>
-        <h3><%= singleNewOrleans.menuItemThree %></h3>
-        <img src=<%= singleNewOrleans.imgThree %> alt="food photo3">
-        <br>
-    </div>
-    <a href="<%= singleNewOrleans._id %>/edit">Edit this listing</a>
-    <a href="/neworleans/<%= singleNewOrleans._id %>/delete">Delete this restaurant</a>
+        <div id="menu-itemsDiv">
+            <h2 class="menuitem">Featured Menu Items:</h2>
+            <br>
+            <h3 class="menuitem"><%= singleNewOrleans.menuItemOne %></h3>
+            <img class="imgClass" src=<%= singleNewOrleans.imgOne %> alt="food photo1">
+            <br>
+            <h3 class="menuitem"><%= singleNewOrleans.menuItemTwo %></h3>
+            <img class="imgClass" src=<%= singleNewOrleans.imgTwo %> alt="food photo2">
+            <br>
+            <h3 class="menuitem"><%= singleNewOrleans.menuItemThree %></h3>
+            <img class="imgClass" src=<%= singleNewOrleans.imgThree %> alt="food photo3">
+            <br>
+        </div>
+        <div id="deleteDiv">
+            <a href="/newOrleans/<%= singleNewOrleans._id %>/delete"><button id="deleteButton">Delete this restaurant</button></a>
+            <a href="<%= singleNewOrleans._id %>/edit"><button id="editButton">Edit this listing</button></a>
+            </div>
+        </div>
 </body>
 </html>
