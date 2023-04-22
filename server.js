@@ -11,17 +11,18 @@ const PORT = 4000;
 
 app.set('view engine', 'ejs');
 
-app.use(express.urlencoded({ extended:false }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/Public'));
 app.use(methodOverride('_method'));
+
+app.use('/newOrleans', neworleansController); 
+app.use('/portland', portlandController);
+app.use('/newYork', newyorkController);
 
 app.get('/', (req, res) => {
     res.render('home.ejs')
 })
 
-app.use('', neworleansController);
-app.use('', portlandController);
-app.use('', newyorkController);
 
 app.listen(PORT, () => {
     console.log(`Server is listening on PORT ${PORT}`);

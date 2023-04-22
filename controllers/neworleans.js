@@ -47,7 +47,7 @@ const nolaSeed = [
     } 
 ];
 
-router.get('/neworleans', async (req, res, next) => {
+router.get('/', async (req, res, next) => {
     try {
         const nolaRestaurants = await neworleans.find({});
         console.log(neworleans);
@@ -58,11 +58,11 @@ router.get('/neworleans', async (req, res, next) => {
     }
 })
 
-router.get('/neworleans/new', (req, res) => {
-    res.render('neworleans/new.ejs');
+router.get('/new', (req, res) => {
+    res.render('neworleans/newOrleansNew.ejs');
 })
 
-router.get('/neworleans/seed/', async (req, res, next) => {
+router.get('/seed', async (req, res, next) => {
     try {
         await neworleans.deleteMany({});
         await neworleans.insertMany(nolaSeed);
@@ -73,17 +73,17 @@ router.get('/neworleans/seed/', async (req, res, next) => {
     }
 })
 
-router.get('/neworleans/:id', async (req, res, next) => {
+router.get('/:id', async (req, res, next) => {
     try {
         const nolaRestaurant = await neworleans.findById(req.params.id);
-        res.render('neworleans/show.ejs', {singleNewOrleans: nolaRestaurant});
+        res.render('neworleans/newOrleansShow.ejs', {singleNewOrleans: nolaRestaurant});
     } catch(err) {
         console.log(err);
         next();
     }
 })
 
-router.post('/neworleans', async (req, res, next) => {
+router.post('/', async (req, res, next) => {
     try {
         const newRestoNola = await neworleans.create(req.body);
         console.log(newRestoNola);
@@ -94,18 +94,18 @@ router.post('/neworleans', async (req, res, next) => {
     }
 })
 
-router.get('/neworleans/:id/edit', async (req, res, next) => {
+router.get('/:id/edit', async (req, res, next) => {
     try {
         const nolaRestoToEdit = await neworleans.findById(req.params.id);
         console.log(nolaRestoToEdit);
-        res.render('neworleans/edit.ejs', {singleNewOrleans: nolaRestoToEdit})
+        res.render('neworleans/newOrleansEdit.ejs', {singleNewOrleans: nolaRestoToEdit})
     } catch(err) {
         console.log(err);
         next();
     }
 })
 
-router.put('/neworleans/:id', async (req, res, next) => {
+router.put('/:id', async (req, res, next) => {
     try {
         const updatedNola = await neworleans.findByIdAndUpdate(req.params.id, req.body);
         console.log(updatedNola);
@@ -116,18 +116,18 @@ router.put('/neworleans/:id', async (req, res, next) => {
     }
 })
 
-router.get('/neworleans/:id/delete', async (req, res, next) => {
+router.get('/:id/delete', async (req, res, next) => {
     try {
         const nolaRestoToDelete = await neworleans.findById(req.params.id);
         console.log(nolaRestoToDelete);
-        res.render('neworleans/delete.ejs', {singleNewOrleans: nolaRestoToDelete});
+        res.render('neworleans/newOrleansDelete.ejs', {singleNewOrleans: nolaRestoToDelete});
     } catch(err) {
         console.log(err);
         next();
     }
 })
 
-router.delete('/neworleans/:id', async (req, res, next) => {
+router.delete('/:id', async (req, res, next) => {
     try {
         const deletedNola = await neworleans.findByIdAndDelete(req.params.id);
         console.log(deletedNola);

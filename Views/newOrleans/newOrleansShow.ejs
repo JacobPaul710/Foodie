@@ -1,0 +1,39 @@
+<div id="navDiv">
+    <%- include('../header.ejs') %>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Name</title>
+</head>
+<body>
+    <h1><%= singleNewOrleans.restaurant %></h1>
+    <div class="blurb">
+        <p><%= singleNewOrleans.review %></p>
+    </div>
+    <div class="info">
+        <p>Cuisine: <%= singleNewOrleans.cuisine %></p>
+        <p>Price range: <%= singleNewOrleans.priceRange %></p>
+        <a href=<%= singleNewOrleans.webLink %>>Visit restaurant website</a> 
+    </div>
+    <br>
+    <div class="menu-items">
+        <h2>Featured Menu Items:</h2>
+        <br>
+        <h3><%= singleNewOrleans.menuItemOne %></h3>
+        <img src=<%= singleNewOrleans.imgOne %> alt="food photo1">
+        <br>
+        <h3><%= singleNewOrleans.menuItemTwo %></h3>
+        <img src=<%= singleNewOrleans.imgTwo %> alt="food photo2">
+        <br>
+        <h3><%= singleNewOrleans.menuItemThree %></h3>
+        <img src=<%= singleNewOrleans.imgThree %> alt="food photo3">
+        <br>
+    </div>
+    <a href="<%= singleNewOrleans._id %>/edit">Edit this listing</a>
+    <a href="/neworleans/<%= singleNewOrleans._id %>/delete">Delete this restaurant</a>
+</body>
+</html>
