@@ -7,30 +7,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/newYork/newYorkShow.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
     <title>Restaurant Name</title>
 </head>
 <body>
-    <h1><%= singleNewYork.restaurant %></h1>
-    <div class="blurb">
+    <div id="restaurantDiv">
+        <h1><%= singleNewYork.restaurant %></h1>
+    </div>
+    <div id="reviewDiv">
         <p><%= singleNewYork.review %></p>
     </div>
-    <div class="info">
+    <div id="infoDiv">
         <p>Cuisine: <%= singleNewYork.cuisine %></p>
         <p>Price range: <%= singleNewYork.priceRange %></p>
         <a href=<%= singleNewYork.webLink %>>Visit restaurant website</a> 
     </div>
     <br>
-    <div class="menu-items">
-        <h2>Featured Menu Items:</h2>
+    <div id="menu-itemsDiv">
+        <h2 class="menuitem">Featured Menu Items:</h2>
         <br>
-        <h3><%= singleNewYork.menuItemOne %></h3>
-        <img src=<%= singleNewYork.imgOne %> alt="food photo1">
+        <h3 class="menuitem"><%= singleNewYork.menuItemOne %></h3>
+        <img class="imgClass"src=<%= singleNewYork.imgOne %> alt="food photo1">
         <br>
-        <h3><%= singleNewYork.menuItemTwo %></h3>
-        <img src=<%= singleNewYork.imgTwo %> alt="food photo2">
+        <h3 class="menuitem"><%= singleNewYork.menuItemTwo %></h3>
+        <img class="imgClass"src=<%= singleNewYork.imgTwo %> alt="food photo2">
         <br>
-        <h3><%= singleNewYork.menuItemThree %></h3>
-        <img src=<%= singleNewYork.imgThree %> alt="food photo3">
+        <h3 class="menuitem"><%= singleNewYork.menuItemThree %></h3>
+        <img class="imgClass"src=<%= singleNewYork.imgThree %> alt="food photo3">
         <br>
     </div>
     <a href="<%= singleNewYork._id %>/delete">Delete this restaurant</a>
