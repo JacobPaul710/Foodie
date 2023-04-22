@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 4000;
 app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(__dirname + '/Public'));
+app.use(express.static(__dirname + '/public'));
 app.use(methodOverride('_method'));
 
 app.use('/newOrleans', neworleansController); 
