@@ -7,33 +7,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Portland/portlandShow.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/header.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
     <title>Restaurant Name</title>
 </head>
 <body>
-    <h1><%= singlePortland.restaurant %></h1>
-    <div class="blurb">
-        <p><%= singlePortland.review %></p>
-    </div>
-    <div class="info">
-        <p>Cuisine: <%= singlePortland.cuisine %></p>
-        <p>Price range: <%= singlePortland.priceRange %></p>
-        <a href=<%= singlePortland.webLink %>>Visit restaurant website</a> 
-    </div>
-    <br>
-    <div class="menu-items">
-        <h2>Featured Menu Items:</h2>
+    <div id="container">
+        <div id="test">
+            <div id="restaurantDiv">
+                <h1><%= singlePortland.restaurant %></h1>
+            </div>
+            <div id="reviewDiv">
+                <p><%= singlePortland.review %></p>
+            </div>
+            <div id="infoDiv">
+                <p>Cuisine: <%= singlePortland.cuisine %></p>
+                <p>Price range: <%= singlePortland.priceRange %></p>
+                <a href=<%= singlePortland.webLink %>>Visit restaurant website</a> 
+            </div>
+        </div>
         <br>
-        <h3><%= singlePortland.menuItemOne %></h3>
-        <img src=<%= singlePortland.imgOne %> alt="food photo1">
-        <br>
-        <h3><%= singlePortland.menuItemTwo %></h3>
-        <img src=<%= singlePortland.imgTwo %> alt="food photo2">
-        <br>
-        <h3><%= singlePortland.menuItemThree %></h3>
-        <img src=<%= singlePortland.imgThree %> alt="food photo3">
-        <br>
-    </div>
-    <a href="<%= singlePortland._id %>/edit">Edit this listing</a>
-    <a href="<%= singlePortland._id %>/delete">Delete this restaurant</a>
+        <div id="menu-itemsDiv">
+            <h2 class="menuitem">Featured Menu Items:</h2>
+            <br>
+            <h3 class="menuitem"><%= singlePortland.menuItemOne %></h3>
+            <img class="imgClass" src=<%= singlePortland.imgOne %> alt="food photo1">
+            <br>
+            <h3 class="menuitem"><%= singlePortland.menuItemTwo %></h3>
+            <img class="imgClass" src=<%= singlePortland.imgTwo %> alt="food photo2">
+            <br>
+            <h3 class="menuitem"><%= singlePortland.menuItemThree %></h3>
+            <img class="imgClass" src=<%= singlePortland.imgThree %> alt="food photo3">
+            <br>
+        </div>
+        <div id="deleteDiv">
+            <a href="/portland/<%= singlePortland._id %>/delete"><button id="deleteButton">Delete this restaurant</button></a>
+            <a href="<%= singlePortland._id %>/edit">Edit this listing</a>
+            </div>
+        </div>
 </body>
 </html>

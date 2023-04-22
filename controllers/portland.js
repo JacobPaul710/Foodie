@@ -116,6 +116,7 @@ router.get('/:id/edit', async (req, res, next) => {
 
 router.put('/:id', async (req, res, next) => {
     try {
+        console.log("edit route hit")
         updatedPdx = await portland.findByIdAndUpdate(req.params.id, req.body);
         console.log(updatedPdx);
         res.redirect(`/portland/${req.params.id}`);
