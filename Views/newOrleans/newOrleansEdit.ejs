@@ -19,14 +19,7 @@
     </div>
 
     <div id="formDiv">
-        <form action="/portland/<%= singleNewOrleans._id %>?_method=PUT">
-            <!-- <label for="city">Select a city</label>
-            <br>
-            <select id="select" name="city">
-                <option value="Portland">Portland</option>
-                <option value="New York">New York</option>
-                <option value="New Orleans">New Orleans</option>
-            </select> -->
+        <form method="POST" action="/newOrleans/<%= singlePortland._id %>?_method=PUT">
             <br>
             <label for="restaurant">Restaurant name: </label>
             <input type="text" name="restaurant" id="restaurant" value=<%= singleNewOrleans.restaurant %>>
